@@ -100,9 +100,3 @@ A: Autoscaling, load balancers, multi-AZ deployments, and global distribution ha
 
 A: Many CI/CD and infra automation pipelines rely on AWS services like `EC2`, `VPC`, `IAM`, `S3`, `CloudFormation`, and `CodePipeline`.
 
----
-
-If you'd like, I can:
-- add collapsible Q&A sections for quicker scanning,
-- create a printable PDF, or
-- split this into separate topic files (compute.md, storage.md, networking.md).
