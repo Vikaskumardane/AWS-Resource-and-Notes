@@ -1,109 +1,108 @@
-Day 1 – AWS & Cloud Basics (Notebook‑style notes)
-Use this as your DAY-1.md and for quick revision.
+<!-- AWS Day 1: Reformatted for GitHub -->
+# AWS — Day 1: Cloud Basics (Interview Notes)
 
-1. What is Cloud Computing?
-On‑demand delivery of IT resources (compute, storage, networking) over the internet, pay‑as‑you‑go.
-​
+Concise, interview-oriented notes for quick revision. Use this as a Day‑1 checklist and Q&A reference.
 
-No need to buy/manage physical servers or data centers; provider manages infrastructure.
-​
+## Table of Contents
+- [What is Cloud Computing?](#what-is-cloud-computing)
+- [Cloud Deployment Models](#cloud-deployment-models)
+- [Why Companies Move to Public Cloud](#why-companies-move-to-public-cloud)
+- [Why AWS Matters](#why-aws-matters)
+- [Advantages of the Cloud](#advantages-of-the-cloud)
+- [AWS Core Building Blocks](#aws-core-building-blocks)
+- [Quick-Revision Interview Q&A](#quick-revision-interview-qa)
 
-Key traits: on‑demand self‑service, broad network access, resource pooling, rapid elasticity, measured service.
-​
+---
 
-2. Public vs Private Cloud
-Public cloud:
+## What is Cloud Computing?
 
-Owned and operated by cloud providers (AWS, Azure, GCP).
+On-demand delivery of IT resources (compute, storage, networking) over the internet with pay-as-you-go pricing.
 
-Resources shared across many customers (multi‑tenant).
+Key points:
+- No need to buy or manage physical servers — the provider operates infrastructure.
+- Main traits: self-service, broad network access, resource pooling, rapid elasticity, measured service.
 
-Accessed over the public internet; pay‑as‑you‑go.
+## Cloud Deployment Models
 
-Private cloud:
+- **Public cloud** — Owned by providers (AWS, Azure, GCP). Multi-tenant, pay-as-you-go, accessed over the internet.
+- **Private cloud** — Dedicated to a single organization (on-prem or hosted). More control and compliance, higher cost/management.
+- **Hybrid cloud** — Mix of public + private; useful when some data must remain private but other workloads need public scalability.
 
-Cloud infrastructure dedicated to a single organization (on‑prem or hosted).
+## Why Companies Move to Public Cloud
 
-More control, customization, and strict security/compliance, but higher cost and management overhead.
+- Lower upfront cost (no large CAPEX); pay only for usage.
+- Faster time to market: provision infrastructure in minutes.
+- Elastic scalability: auto-scale with demand.
+- Global reach: deploy in multiple regions close to users.
+- Built-in provider services for backup, DR, monitoring, and security.
 
-Hybrid:
+## Why AWS Matters
 
-Mix of public + private, used when some workloads/data must stay private, others benefit from public scalability.
-​
+- One of the earliest and largest public cloud providers with a global footprint (regions, AZs, edge locations).
+- Large ecosystem for DevOps and infra automation: services such as `EC2`, `IAM`, `VPC`, `S3`, `CloudWatch`, `CloudFormation`, `ECR`, `ECS`, `EKS`.
+- Strong IaC and automation support (CloudFormation, Terraform) — makes repeatable deployments common in interviews.
 
-3. Why Companies Move to Public Cloud
-Lower upfront cost (no big capex on hardware); pay only for what you use.
+## Advantages of the Cloud (General + AWS)
 
-Faster time to market: provision servers in minutes instead of weeks.
+- **Cost:** No hardware purchase; options like spot, on-demand, reserved instances for optimization.
+- **Reliability & Performance:** Multi-AZ, managed load balancers, CDN (`CloudFront`).
+- **Security:** `IAM`, encryption, VPC isolation, audit services (`CloudTrail`, `Config`).
+- **Agility:** Rapid experimentation with managed services (databases, analytics, ML, serverless `Lambda`).
 
-Elastic scalability: scale up/down automatically with demand (autoscaling).
+## AWS Core Building Blocks to Know from Day 1
 
-Global reach: deploy apps in multiple regions near users.
-​
+- **Regions & Availability Zones (AZs)** — geographic areas and isolated data centers for HA.
+- **Compute:** `EC2`, `Lambda`.
+- **Storage:** `S3`, `EBS`, `EFS`, `Glacier`.
+- **Networking:** `VPC`, subnets, `Route 53`, Load Balancers.
+- **Security & IAM:** users, groups, roles, and policies.
 
-Built‑in security, backup, disaster recovery features from the provider.
+## Quick-Revision Interview Q&A
+Use this right before interviews — short Q&A style.
 
-4. Why AWS Is Important in Public Cloud
-One of the largest and earliest public cloud providers with global presence (regions, AZs, edge locations).
+**Q1: What is cloud computing?**
 
-Rich ecosystem for DevOps: EC2, IAM, VPC, S3, CloudWatch, CloudFormation, CodeCommit/CodeBuild/CodeDeploy/CodePipeline, ECR/ECS/EKS, etc.
+A: Delivery of computing services (servers, storage, databases, networking) over the internet with pay-as-you-go pricing.
 
-Strong integration between services, good automation and IaC support (CloudFormation, Terraform).
+**Q2: What are the main cloud deployment models?**
 
-Widely used in industry → high demand for AWS + DevOps skills in interviews and jobs.
+A: Public cloud, private cloud, hybrid cloud.
 
-5. Advantages of Moving to Cloud (General + AWS)
-Cost: no hardware purchase, reduced maintenance, right‑size resources, spot/on‑demand/reserved pricing options.
+**Q3: Explain public vs private cloud with an example.**
 
-Performance & reliability: multiple AZs, managed load balancing, automatic failover, CDN (CloudFront).
+A: Public — an AWS region shared by many customers (multi-tenant). Private — dedicated infrastructure for a single organization, often on-prem.
 
-Security: IAM, encryption, network isolation (VPC), monitoring/audit (CloudTrail, Config, CloudWatch).
+**Q4: Why move from on-prem to public cloud?**
 
-Agility & innovation: experiment quickly, use managed services for databases, analytics, AI/ML, serverless (Lambda).
+A: Reduced CAPEX, faster provisioning, elastic scaling, global reach, managed services, improved DR and agility.
 
-6. AWS Core Building Blocks to Know from Day 1
-Regions & Availability Zones (AZs) – geographic locations and isolated data centers.
-​
+**Q5: What advantages does cloud have over traditional data centers?**
 
-Compute: EC2, Lambda.
+A: No hardware management, pay-as-you-go, elasticity, automation, global availability, and many managed services.
 
-Storage: S3, EBS, EFS, Glacier.
+**Q6: What is AWS?**
 
-Networking: VPC, subnets, Route 53, Load Balancers.
+A: Amazon Web Services — a public cloud platform offering compute, storage, networking, database, analytics, and many managed services.
 
-Security & IAM: IAM users/groups/roles/policies.
+**Q7: Name three core AWS service categories.**
 
-Quick‑Revision Interview Q&A (Most Asked on Day‑1 Topics)
-Use this section right before interviews.
+A: Compute (`EC2`, `Lambda`), Storage (`S3`, `EBS`, `EFS`), Networking (`VPC`, `Route 53`, `CloudFront`).
 
-Conceptual Questions
-Q1. What is cloud computing?
-A. Delivery of computing services (servers, storage, databases, networking, etc.) over the internet with pay‑as‑you‑go pricing.
-​
+**Q8: Region vs Availability Zone — what's the difference?**
 
-Q2. What are the main cloud deployment models?
-A. Public cloud, private cloud, hybrid cloud.
+A: Region = separate geographic area. AZ = one or more isolated data centers inside a region used for high availability.
 
-Q3. Explain public vs private cloud with an example.
-A. Public: AWS region where many customers share infrastructure; private: dedicated environment for one organization, often on‑prem or hosted.
+**Q9: How does cloud enable scalability and high availability?**
 
-Q4. Why do companies move from on‑prem to public cloud?
-A. Reduced capex, faster provisioning, elastic scaling, global reach, managed services, improved DR and agility.
+A: Autoscaling, load balancers, multi-AZ deployments, and global distribution handle traffic and failures.
 
-Q5. What are the advantages of cloud over traditional data centers?
-A. No hardware management, pay‑as‑you‑go, elasticity, automation, global availability, rich managed services.
+**Q10: Why should a DevOps engineer learn AWS?**
 
-Q6. What is AWS?
-A. Amazon Web Services, a comprehensive public cloud platform providing compute, storage, networking, database, analytics, and more on a pay‑as‑you‑go model.
+A: Many CI/CD and infra automation pipelines rely on AWS services like `EC2`, `VPC`, `IAM`, `S3`, `CloudFormation`, and `CodePipeline`.
 
-Q7. Name three core service categories in AWS.
-A. Compute (EC2, Lambda), Storage (S3, EBS, EFS), Networking (VPC, Route 53, CloudFront).
+---
 
-Q8. What is the difference between region and availability zone in AWS?
-A. Region = separate geographic area; AZ = one or more isolated data centers inside a region, used for high availability.
-
-Q9. How does cloud help with scalability and high availability?
-A. Use autoscaling, load balancers, multi‑AZ deployments, and global distribution to handle traffic and failures.
-
-Q10. As a DevOps engineer, why should you learn AWS?
-A. Most CI/CD, infra automation, and modern deployments are built on AWS services like EC2, VPC, IAM, S3, CloudFormation, and CodePipeline.
+If you'd like, I can:
+- add collapsible Q&A sections for quicker scanning,
+- create a printable PDF, or
+- split this into separate topic files (compute.md, storage.md, networking.md).
